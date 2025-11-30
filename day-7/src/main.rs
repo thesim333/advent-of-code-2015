@@ -85,6 +85,12 @@ fn solve_for(wire: &str, instructions: &String) -> u16 {
         processes.insert(_wire, op);
     }
 
+    // part 1
+    let answer = evaluate(wire, &processes, &mut wires);
+
+    // part 2
+    wires.clear();
+    wires.insert("b".to_string(), answer);
     evaluate(wire, &processes, &mut wires)
 }
 
