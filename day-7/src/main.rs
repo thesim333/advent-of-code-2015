@@ -13,7 +13,7 @@ enum Op {
 
 fn main() {
     let list = fs::read_to_string("instructions.txt")
-        .expect("Should have been able to read list.txt");
+        .expect("Should have been able to read instructions.txt");
 
     println!("wire a = {:#?}", solve_for("a", &list));
 }
